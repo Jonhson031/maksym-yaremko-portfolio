@@ -1,7 +1,7 @@
 export const socials = {
   github: 'https://github.com/Jonhson031',
   linkedin: 'https://www.linkedin.com/in/maksym-yaremko-web-developer/',
-  resume: 'https://drive.google.com/file/d/1X8a2v5z5z5z5z5z5z5z5z5z5z5z5z5z/view?usp=sharing',
+  resume: 'https://drive.google.com/file/d/1xLFOWbbcS2Pjuo90JEMwYe1ysqYGZJ6V/view', 
   email: 'jonhson228124@gmail.com',
 };
 
