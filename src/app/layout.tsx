@@ -4,7 +4,6 @@ import {
   Instrument_Sans,
   JetBrains_Mono,
 } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
 
 const bricolageGrotesque = Bricolage_Grotesque({
   variable: "--font-display",
@@ -89,15 +88,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
-      <Analytics />
-      <html lang="en">
-        <body
-          className={`${bricolageGrotesque.variable} ${instrumentSans.variable} ${jetbrainsMono.variable}`}
-        >
-          {children}
-        </body>
-      </html>
-    </>
+    <html lang="en">
+      <body
+        className={`${bricolageGrotesque.variable} ${instrumentSans.variable} ${jetbrainsMono.variable}`}
+      >
+        {children}
+      </body>
+    </html>
   );
 }
