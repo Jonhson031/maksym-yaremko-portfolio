@@ -4,6 +4,7 @@ import {
   Instrument_Sans,
   JetBrains_Mono,
 } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 
 const bricolageGrotesque = Bricolage_Grotesque({
   variable: "--font-display",
@@ -22,7 +23,6 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500"],
 });
 
-// @ts-expect-error Next.js handles global CSS imports during the build.
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -88,12 +88,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body
-        className={`${bricolageGrotesque.variable} ${instrumentSans.variable} ${jetbrainsMono.variable}`}
-      >
-        {children}
-      </body>
-    </html>
+    <>
+      <Analytics />
+      <html lang="en">
+        <body
+          className={`${bricolageGrotesque.variable} ${instrumentSans.variable} ${jetbrainsMono.variable}`}
+        >
+          {children}
+        </body>
+      </html>
+    </>
   );
 }
