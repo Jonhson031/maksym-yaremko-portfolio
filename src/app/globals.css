@@ -1,4 +1,4 @@
-@import './variables.css';
+@import '../styles/variables.css';
 
 *,
 *::before,
@@ -15,6 +15,7 @@ html {
   html {
     scroll-behavior: auto;
   }
+
   *,
   *::before,
   *::after {
@@ -97,10 +98,12 @@ p {
 
 /* Shared "live" pulse used by status dots across Hero / Building sections */
 @keyframes pulse {
+
   0%,
   100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.35;
   }

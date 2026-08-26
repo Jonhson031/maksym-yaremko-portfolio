@@ -1,10 +1,4 @@
-/**
- * Design tokens — the single source of truth for color, type, spacing,
- * and layout. Every component reads from these custom properties instead
- * of hardcoding values, so the whole site can be re-themed from one file.
- */
 :root {
-  /* ---- color ---- */
   --color-bg: #f7f7f5;
   --color-bg-raised: #ffffff;
   --color-surface: #efefea;
@@ -16,7 +10,6 @@
   --color-accent: #1749ff;
   --color-accent-ink: #0e2fb8;
 
-  /* dark "Approach" band */
   --color-dark-bg: #121212;
   --color-dark-bg-raised: #1a1a1a;
   --color-dark-surface: #212121;
@@ -27,7 +20,6 @@
   --color-dark-border-strong: #6e6e68;
   --color-dark-accent: #6b8cff;
 
-  /* dark "Stack" panel — a shade lighter than Approach */
   --color-charcoal-bg: #201f1b;
   --color-charcoal-bg-raised: #292823;
   --color-charcoal-surface: #2d2c27;
@@ -38,16 +30,13 @@
   --color-charcoal-border-strong: #77766d;
   --color-charcoal-accent: #6b8cff;
 
-  /* ---- type ---- */
   --font-display: 'Bricolage Grotesque', 'Helvetica Neue', Arial, sans-serif;
   --font-body: 'Instrument Sans', 'Helvetica Neue', Arial, sans-serif;
   --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
 
-  /* ---- layout ---- */
   --container-width: 90rem;
   --container-pad: clamp(1.25rem, 5vw, 4rem);
   --section-pad: clamp(4.5rem, 11vw, 10.5rem);
 
-  /* ---- motion ---- */
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 }

@@ -1,5 +1,3 @@
-/* This section renders on a dark band — tokens are overridden locally so
-   every child (via var(--color-*)) automatically flips to the dark palette. */
 .dark {
   --color-bg: var(--color-dark-bg);
   --color-bg-raised: var(--color-dark-bg-raised);
