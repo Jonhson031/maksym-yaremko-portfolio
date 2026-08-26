@@ -1,0 +1,57 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2.5rem, 6vw, 5.625rem);
+}
+
+.statement {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.25rem, 4.6vw, 3.75rem);
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+
+.text {
+  color: var(--color-text-secondary);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  max-width: 52ch;
+}
+.text strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.facts {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  border-top: 0.0625rem solid var(--color-border);
+}
+
+.fact {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 0.0625rem solid var(--color-border);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+}
+.factLabel {
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+}
+.factValue {
+  color: var(--color-text);
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 56.25rem) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,127 @@
+.hero {
+  padding-top: clamp(9.375rem, 20vw, 13.75rem);
+  padding-bottom: var(--section-pad);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.55fr 1fr;
+  gap: clamp(2.5rem, 6vw, 5.625rem);
+  align-items: start;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 1.75rem;
+}
+
+.dot {
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  background: var(--color-accent);
+  display: inline-block;
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.75rem, 8vw, 7.25rem);
+  line-height: 0.96;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.line {
+  display: block;
+  overflow: hidden;
+}
+
+.lineInner {
+  font-style: normal;
+  display: inline-block;
+  transform: translateY(110%);
+  transition: transform 0.9s var(--ease);
+}
+
+.revealed .lineInner {
+  transform: translateY(0);
+}
+
+.accent {
+  color: var(--color-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lineInner {
+    transform: none;
+  }
+}
+
+.sub {
+  max-width: 46ch;
+  font-size: clamp(1.0625rem, 1.3vw, 1.25rem);
+  color: var(--color-text-secondary);
+  margin-top: 2rem;
+  line-height: 1.6;
+}
+
+.ctas {
+  display: flex;
+  align-items: center;
+  gap: 1.125rem;
+  margin-top: 2.75rem;
+  flex-wrap: wrap;
+}
+
+.availability {
+  margin-top: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.1em;
+  color: var(--color-text-secondary);
+  padding: 0.5625rem 0.875rem 0.5625rem 0.75rem;
+  border: 0.0625rem solid var(--color-border-strong);
+  border-radius: 0.125rem;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@media (max-width: 73.75rem) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 40rem) {
+  .hero {
+    padding-top: 8.75rem;
+  }
+  .ctas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .ctaBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}

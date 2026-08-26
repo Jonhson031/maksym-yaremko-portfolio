@@ -1,0 +1,113 @@
+/* This section renders on a dark band — tokens are overridden locally so
+   every child (via var(--color-*)) automatically flips to the dark palette. */
+.dark {
+  --color-bg: var(--color-dark-bg);
+  --color-bg-raised: var(--color-dark-bg-raised);
+  --color-surface: var(--color-dark-surface);
+  --color-text: var(--color-dark-text);
+  --color-text-secondary: var(--color-dark-text-secondary);
+  --color-text-tertiary: var(--color-dark-text-tertiary);
+  --color-border: var(--color-dark-border);
+  --color-border-strong: var(--color-dark-border-strong);
+  --color-accent: var(--color-dark-accent);
+
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.25rem;
+  position: relative;
+}
+.steps::before {
+  content: '';
+  position: absolute;
+  top: 0.6875rem;
+  left: 0;
+  right: 0;
+  height: 0.0625rem;
+  background: var(--color-border);
+}
+
+.step {
+  position: relative;
+  padding-right: 1.25rem;
+}
+
+.num {
+  width: 1.375rem;
+  height: 1.375rem;
+  border-radius: 50%;
+  background: var(--color-bg);
+  border: 0.0625rem solid var(--color-border-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1.375rem;
+  transition:
+    background 0.3s var(--ease),
+    border-color 0.3s var(--ease),
+    color 0.3s var(--ease);
+}
+.step:hover .num {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.title {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.625rem;
+  text-transform: uppercase;
+}
+
+.desc {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  line-height: 1.55;
+  max-width: 22ch;
+}
+
+.statement {
+  margin-top: clamp(3.5rem, 7vw, 5.5rem);
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.375rem, 2.6vw, 2rem);
+  line-height: 1.4;
+  max-width: 46ch;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+@media (max-width: 53.75rem) {
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+  .steps::before {
+    display: none;
+  }
+  .step {
+    padding-left: 2rem;
+    padding-right: 0;
+    border-left: 0.0625rem solid var(--color-border);
+    padding-bottom: 0.25rem;
+  }
+  .num {
+    position: absolute;
+    left: -0.6875rem;
+    top: -0.0625rem;
+    background: var(--color-bg);
+  }
+  .desc {
+    max-width: 46ch;
+  }
+}

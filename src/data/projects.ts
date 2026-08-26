@@ -1,0 +1,60 @@
+import type { Project } from '@/types/project';
+
+export const projects: Project[] = [
+  {
+    id: '01',
+    index: '01 / 04',
+    name: 'UACA',
+    kicker: 'Tournament Management Platform',
+    description:
+      'A full-stack platform for chess tournament registration, management, payments, and administration — built to run real, paid tournaments end to end.',
+    tech: ['Next.js', 'TypeScript', 'MongoDB', 'Stripe', 'Node.js'],
+    role: 'Co-Founder, Full-Stack Engineer',
+    year: '2025 — Present',
+    url: 'ukrainianamericanchess.com/tournaments',
+    href: 'https://www.ukrainianamericanchess.com',
+    featured: true,
+    image: '/projects/uaca.jpg',
+  },
+  {
+    id: '02',
+    index: '02 / 04',
+    name: 'VELVAIRE',
+    kicker: 'Premium Mobile Detailing Website',
+    description:
+      'A production marketing website for a premium mobile detailing brand, built on Next.js with headless WordPress for content management.',
+    tech: ['Next.js', 'React', 'TypeScript', 'WordPress', 'ACF'],
+    role: 'Frontend Engineer',
+    year: '2024',
+    url: 'velvaire.com',
+    href: '#',
+    image: '/projects/velvaire.png',
+  },
+  {
+    id: '03',
+    index: '03 / 04',
+    name: 'FORGE ATHLETICS',
+    kicker: 'E-Commerce Platform',
+    description: 'A full-stack e-commerce application with product catalog, cart, and order management, built from the ground up.',
+    tech: ['React', 'Node.js', 'Express', 'MongoDB'],
+    role: 'Full-Stack Engineer',
+    year: '2024',
+    url: 'forge-athletics.shop',
+    href: '#',
+    image: '/projects/forge-athletics.png',
+  },
+  {
+    id: '04',
+    index: '04 / 04',
+    name: 'ELDER SPEECH TRANSLATOR',
+    kicker: 'Interactive Language Translator',
+    description:
+      "An interactive translator inspired by The Witcher's Elder Speech — a playful full-stack project exploring language and interface design.",
+    tech: ['React', 'Node.js', 'MongoDB'],
+    role: 'Full-Stack Engineer',
+    year: '2023',
+    url: 'elder-speech.app',
+    href: '#',
+    image: '/projects/elder-speech-translator.png',
+  },
+];

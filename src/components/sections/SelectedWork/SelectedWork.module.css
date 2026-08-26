@@ -1,0 +1,4 @@
+.workList {
+  display: flex;
+  flex-direction: column;
+}
