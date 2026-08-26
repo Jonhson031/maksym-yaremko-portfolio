@@ -36,6 +36,9 @@ export const metadata: Metadata = {
   applicationName: "Maksym Yaremko Portfolio",
   authors: [{ name: "Maksym Yaremko", url: "https://github.com/Jonhson031" }],
   creator: "Maksym Yaremko",
+  verification: {
+    google: "g3OB2QS3aRfOUaZLSc2pfFBmtd5DcljKKPuTsBKjNn0",
+  },
   keywords: [
     "Maksym Yaremko",
     "full-stack developer",
