@@ -263,6 +263,10 @@
   margin-bottom: 2.75rem;
 }
 
+.featured .visualInner img {
+  transform: scale(1.2)
+}
+
 .featured .visualInner {
   aspect-ratio: 16 / 9;
 }
@@ -302,5 +306,9 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0.375rem;
+  }
+
+  .featured .visualInner img {
+    transform: scale(1.5)
   }
 }
