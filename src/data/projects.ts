@@ -3,7 +3,7 @@ import type { Project } from "@/types/project";
 export const projects: Project[] = [
   {
     id: "01",
-    index: "01 / 04",
+    index: "01 / 05",
     name: "UACA",
     kicker: "Tournament Management Platform",
     description:
@@ -18,7 +18,21 @@ export const projects: Project[] = [
   },
   {
     id: "02",
-    index: "02 / 04",
+    index: "02 / 05",
+    name: "ZELENA HOME",
+    kicker: "Local Business Website & SEO",
+    description:
+      "A production website for a residential cleaning business in the Chicago suburbs — designed in Figma, built with Next.js, with a validated quote-request form, 60+ statically generated service-area pages, structured data and local SEO.",
+    tech: ["Next.js", "TypeScript", "CSS Modules", "Zod", "Vercel"],
+    role: "Designer & Full-Stack Developer",
+    year: "2026",
+    url: "zelenahome.com",
+    href: "https://zelenahome.com",
+    image: "/projects/zelena-home.png",
+  },
+  {
+    id: "03",
+    index: "03 / 05",
     name: "FORGE ATHLETICS",
     kicker: "E-Commerce Platform",
     description:
@@ -31,8 +45,8 @@ export const projects: Project[] = [
     image: "/projects/forge.png",
   },
   {
-    id: "03",
-    index: "03 / 04",
+    id: "04",
+    index: "04 / 05",
     name: "ELDER SPEECH TRANSLATOR",
     kicker: "Interactive Language Translator",
     description:
@@ -45,8 +59,8 @@ export const projects: Project[] = [
     image: "/projects/witcher.png",
   },
   {
-    id: "04",
-    index: "04 / 04",
+    id: "05",
+    index: "05 / 05",
     name: "REEN BANK",
     kicker: "Responsive Banking Dashboard (Frontend)",
     description:

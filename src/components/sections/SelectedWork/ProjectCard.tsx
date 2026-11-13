@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import { useEffect, useRef, useState, type MouseEvent } from 'react';
-import { ArrowIcon } from '@/components/ui/Icons';
-import Tag from '@/components/ui/Tag/Tag';
-import type { Project } from '@/types/project';
-import styles from './ProjectCard.module.css';
-import Image from 'next/image';
+import { useEffect, useRef, useState, type MouseEvent } from "react";
+import { ArrowIcon } from "@/components/ui/Icons";
+import Tag from "@/components/ui/Tag/Tag";
+import type { Project } from "@/types/project";
+import styles from "./ProjectCard.module.css";
+import Image from "next/image";
 
 interface ProjectCardProps {
   project: Project;
@@ -87,14 +87,16 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
   return (
     <article
-      className={`${styles.project} ${project.featured ? styles.featured : ''}`}
+      className={`${styles.project} ${project.featured ? styles.featured : ""}`}
       onMouseMove={handleMouseMove}
     >
-      <a href={project.href} target="_blank" rel="noopener noreferrer" className={styles.link}>
+      <a href={project.href} target="_blank" className={styles.link}>
         <div className={styles.top}>
           <div className={styles.topLeft}>
             <span className={styles.id}>{project.index}</span>
-            {project.featured && <span className={styles.tag}>★ FEATURED PROJECT</span>}
+            {project.featured && (
+              <span className={styles.tag}>★ FEATURED PROJECT</span>
+            )}
           </div>
           <span className={styles.year}>{project.year.toUpperCase()}</span>
         </div>
